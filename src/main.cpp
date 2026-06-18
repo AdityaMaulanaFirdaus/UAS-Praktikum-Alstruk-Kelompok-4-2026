@@ -22,17 +22,27 @@ int jumlahRiwayat = 0;
 
 // --- TUGAS ANGGOTA 3 ---
 void loadDatabaseBuku() {
-    // Tulis data awal bawaan di sini
-    cout << "\n-----Fitur Data Base-----" << endl;
-    cout << "Fitur ini masih dalam pengembangan...\n";
+    daftarBuku[0] = {"B01", "Struktur Data C++", "sasa", true};
+    daftarBuku[1] = {"B02", "Dasar Pemrograman", "martin ", true};
+    daftarBuku[2] = {"B03", "Logika Informatika", "chou ", true};
+    jumlahBuku = 3;
 }
 
 void tampilBuku() {
-    // Tulis logika menampilkan buku di sini
-     cout << "\n-----Fitur Tampil Buku-----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+    cout << "\n========================================\n";
+    cout << "        DAFTAR BUKU PERPUSTAKAAN        \n";
+    cout << "========================================\n";
+    if (jumlahBuku == 0) {
+        cout << "Perpustakaan kosong.\n";
+        return;
+    }
+    for (int i = 0; i < jumlahBuku; i++) {
+        cout << "ID: " << daftarBuku[i].idBuku 
+             << " | Judul: " << daftarBuku[i].judul 
+             << " | Pengarang: " << daftarBuku[i].pengarang 
+             << " | Status: " << (daftarBuku[i].tersedia ? "Tersedia" : "Dipinjam") << endl;
+    }
 }
-
 void cariBuku() {
     // Tulis logika pencarian buku di sini
     cout << "\n-----Fitur Cari Buku----" << endl;
