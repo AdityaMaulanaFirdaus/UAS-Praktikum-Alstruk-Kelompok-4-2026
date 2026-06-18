@@ -23,50 +23,69 @@ int jumlahRiwayat = 0;
 // --- TUGAS ANGGOTA 3 ---
 void loadDatabaseBuku() {
     // Tulis data awal bawaan di sini
+    cout << "\n-----Fitur Data Base-----" << endl;
+    cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void tampilBuku() {
     // Tulis logika menampilkan buku di sini
+     cout << "\n-----Fitur Tampil Buku-----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void cariBuku() {
     // Tulis logika pencarian buku di sini
+    cout << "\n-----Fitur Cari Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 
 // --- TUGAS ANGGOTA 2 ---
 void tambahBuku() {
     // Tulis logika tambah data buku di sini
+    cout << "\n-----Fitur Tambah Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void hapusBuku() {
     // Tulis logika hapus data buku di sini
+     cout << "\n-----Fitur Hapus Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 
 // --- TUGAS ANGGOTA 4 ---
 void pinjamBuku() {
     // Tulis logika pinjam buku di sini
+     cout << "\n-----Fitur Pinjam Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void kembalikanBuku() {
     // Tulis logika kembalikan buku di sini
+     cout << "\n-----Fitur Kembalikan Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 
 // --- TUGAS ANGGOTA 5 ---
 void sortingBuku() {
     // Tulis logika urutkan buku di sini
+     cout << "\n-----Fitur Sorting Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void rekomendasiBuku() {
     // Tulis logika rekomendasi buku di sini
+     cout << "\n-----Fitur Rekomendasi Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
 
 void riwayatBuku() {
     // Tulis logika riwayat transaksi di sini
+     cout << "\n-----Fitur Riwayat Buku----" << endl;
+     cout << "Fitur ini masih dalam pengembangan...\n";
 }
-
 
 // --- MENU UTAMA ---
 int main() {
