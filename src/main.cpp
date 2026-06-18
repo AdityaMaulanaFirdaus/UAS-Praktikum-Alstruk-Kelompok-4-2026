@@ -15,26 +15,56 @@ struct Buku {
 const int MAX_BUKU = 100;
 Buku daftarBuku[MAX_BUKU];
 int jumlahBuku = 0;
-
+\
 string riwayatPeminjaman[MAX_BUKU];
 int jumlahRiwayat = 0;
 
 
 // --- TUGAS ANGGOTA 3 ---
 void loadDatabaseBuku() {
-    // Tulis data awal bawaan di sini
+    daftarBuku[0] = {"B01", "Struktur Data C++", "sasa", true};
+    daftarBuku[1] = {"B02", "Dasar Pemrograman", "martin ", true};
+    daftarBuku[2] = {"B03", "Logika Informatika", "chou ", true};
+    jumlahBuku = 3;
+
+
+}
     cout << "\n-----Fitur Data Base-----" << endl;
     cout << "Fitur ini masih dalam pengembangan...\n";
-}
 
 void tampilBuku() {
-    // Tulis logika menampilkan buku di sini
+    cout << "\n========================================\n";
+    cout << "        DAFTAR BUKU PERPUSTAKAAN        \n";
+    cout << "========================================\n";
+    if (jumlahBuku == 0) {
+        cout << "Perpustakaan kosong.\n";
+        return;
+    }
+    for (int i = 0; i < jumlahBuku; i++) {
+        cout << "ID: " << daftarBuku[i].idBuku 
+             << " | Judul: " << daftarBuku[i].judul 
+             << " | Pengarang: " << daftarBuku[i].pengarang 
+             << " | Status: " << (daftarBuku[i].tersedia ? "Tersedia" : "Dipinjam") << endl;
+    }
+}
      cout << "\n-----Fitur Tampil Buku-----" << endl;
      cout << "Fitur ini masih dalam pengembangan...\n";
-}
 
 void cariBuku() {
-    // Tulis logika pencarian buku di sini
+    string kataKunci;
+    cout << "\nMasukkan Judul atau ID Buku yang dicari: ";
+    cin.ignore();
+    getline(cin, kataKunci);
+    
+    bool ketemu = false;
+    for (int i = 0; i < jumlahBuku; i++) {
+        if (daftarBuku[i].judul == kataKunci || daftarBuku[i].idBuku == kataKunci) {
+            cout << "\n[Buku Ditemukan]\n";
+            cout << "ID: " << daftarBuku[i].idBuku << " | Judul: " << daftarBuku[i].judul << endl;
+            ketemu = true;
+        }
+    }
+    if (! ketemu) cout << "Buku tidak ditemukan.\n";
     cout << "\n-----Fitur Cari Buku----" << endl;
      cout << "Fitur ini masih dalam pengembangan...\n";
 }
