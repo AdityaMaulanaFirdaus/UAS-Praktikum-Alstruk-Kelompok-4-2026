@@ -42,16 +42,41 @@ void cariBuku() {
 
 // --- TUGAS ANGGOTA 2 ---
 void tambahBuku() {
-    // Tulis logika tambah data buku di sini
-    cout << "\n-----Fitur Tambah Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+	
+    if (jumlahBuku >= MAX_BUKU) {
+        cout << "\nKapasitas perpustakaan penuh!\n";
+        return;
+    }
+    cout << "\nMasukkan ID Buku baru: "; cin >> daftarBuku[jumlahBuku].idBuku;
+    cout << "Masukkan Judul Buku  : "; cin.ignore(); getline(cin, daftarBuku[jumlahBuku].judul);
+    cout << "Masukkan Pengarang   : "; getline(cin, daftarBuku[jumlahBuku].pengarang);
+    daftarBuku[jumlahBuku].tersedia = true;
+    jumlahBuku++;
+    cout << "\n>> Buku berhasil ditambahkan!\n";
 }
 
 void hapusBuku() {
-    // Tulis logika hapus data buku di sini
-     cout << "\n-----Fitur Hapus Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+	
+    string id;
+    cout << "\nMasukkan ID Buku yang ingin dihapus: "; cin >> id;
+    int indeks = -1;
+    for (int i = 0; i < jumlahBuku; i++) {
+        if (daftarBuku[i].idBuku == id) {
+            indeks = i;
+            break;
+        }
+    }
+    if (indeks == -1) {
+        cout << "Buku dengan ID tersebut tidak ditemukan.\n";
+    } else {
+        for (int i = indeks; i < jumlahBuku - 1; i++) {
+            daftarBuku[i] = daftarBuku[i + 1];
+        }
+        jumlahBuku--;
+        cout << "\n>> Buku berhasil dihapus!\n";
+    }
 }
+g
 
 
 // --- TUGAS ANGGOTA 4 ---
