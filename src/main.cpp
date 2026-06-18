@@ -56,16 +56,45 @@ void hapusBuku() {
 
 // --- TUGAS ANGGOTA 4 ---
 void pinjamBuku() {
-    // Tulis logika pinjam buku di sini
-     cout << "\n-----Fitur Pinjam Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+    string id;
+    cout << "\nMasukkan ID Buku yang ingin dipinjam: "; cin >> id;
+    for (int i = 0; i < jumlahBuku; i++) {
+        if (daftarBuku[i].idBuku == id) {
+            if (daftarBuku[i].tersedia) {
+                daftarBuku[i].tersedia = false;
+                riwayatPeminjaman[jumlahRiwayat] = "Meminjam buku: " + daftarBuku[i].judul;
+                jumlahRiwayat++;
+                cout << "\n>> Berhasil meminjam buku: " << daftarBuku[i].judul << endl;
+            } else {
+                cout << "\n[Peringatan] Maaf, buku sedang dipinjam orang lain.\n";
+            }
+            return;
+        }
+    }
+    cout << "ID Buku tidak terdaftar.\n";
+}
+
 }
 
 void kembalikanBuku() {
-    // Tulis logika kembalikan buku di sini
-     cout << "\n-----Fitur Kembalikan Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+    string id;
+    cout << "\nMasukkan ID Buku yang ingin dikembalikan: "; cin >> id;
+    for (int i = 0; i < jumlahBuku; i++) {
+        if (daftarBuku[i].idBuku == id) {
+            if (!daftarBuku[i].tersedia) {
+                daftarBuku[i].tersedia = true;
+                riwayatPeminjaman[jumlahRiwayat] = "Mengembalikan buku: " + daftarBuku[i].judul;
+                jumlahRiwayat++;
+                cout << "\n>> Terima kasih, buku \"" << daftarBuku[i].judul << "\" telah dikembalikan.\n";
+            } else {
+                cout << "\n[Peringatan] Buku ini sudah ada di perpustakaan (tidak sedang dipinjam).\n";
+            }
+            return;
+        }
+    }
+    cout << "ID Buku tidak terdaftar.\n";
 }
+
 
 
 // --- TUGAS ANGGOTA 5 ---
