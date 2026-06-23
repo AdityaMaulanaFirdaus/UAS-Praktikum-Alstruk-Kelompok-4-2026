@@ -1,4 +1,4 @@
-# 📚 Sistem Manajemen Perpustakaan Modern - Kelompok 4
+# 📚 Sistem Manajemen Perpustakaan Modern (SMPM) - Kelompok 4
 
 > **Proyek UAS Praktikum Algoritma dan Struktur Data**
 > Sebuah sistem otomasi tata kelola data literatur terintegrasi berbasis *desktop console* (C++) yang menerapkan arsitektur data linear *Array of Struct* yang dikombinasikan dengan algoritma sorting sekuensial dan manajemen riwayat berbasis *buffer array* statis untuk efisiensi pelacakan sirkulasi buku.
