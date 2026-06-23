@@ -70,21 +70,41 @@ void kembalikanBuku() {
 
 // --- TUGAS ANGGOTA 5 ---
 void sortingBuku() {
-    // Tulis logika urutkan buku di sini
-     cout << "\n-----Fitur Sorting Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+   for (int i = 0; i < jumlahBuku - 1; i++) {
+        for (int j = 0; j < jumlahBuku - i - 1; j++) {
+            if (daftarBuku[j].judul > daftarBuku[j + 1].judul) {
+                Buku temp = daftarBuku[j];
+                daftarBuku[j] = daftarBuku[j + 1];
+                daftarBuku[j + 1] = temp;
+            }
+        }
+    }
+    cout << "\n>> Daftar buku berhasil diurutkan berdasarkan judul (A-Z)!\n";
+    tampilBuku();
 }
 
 void rekomendasiBuku() {
-    // Tulis logika rekomendasi buku di sini
-     cout << "\n-----Fitur Rekomendasi Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+    cout << "\n========================================\n";
+    cout << "       REKOMENDASI BUKU MINGGU INI      \n";
+    cout << "========================================\n";
+    if (jumlahBuku > 0) {
+        cout << " -> " << daftarBuku[0].judul << " (Paling banyak dicari)\n";
+    } else {
+        cout << " Belum ada rekomendasi.\n";
+    }
 }
 
 void riwayatBuku() {
-    // Tulis logika riwayat transaksi di sini
-     cout << "\n-----Fitur Riwayat Buku----" << endl;
-     cout << "Fitur ini masih dalam pengembangan...\n";
+    cout << "\n========================================\n";
+    cout << "      RIWAYAT TRANSAKSI PERPUSTAKAAN    \n";
+    cout << "========================================\n";
+    if (jumlahRiwayat == 0) {
+        cout << " Belum ada riwayat transaksi.\n";
+        return;
+    }
+    for (int i = 0; i < jumlahRiwayat; i++) {
+        cout << " " << i + 1 << ". " << riwayatPeminjaman[i] << endl;
+    }
 }
 
 // --- MENU UTAMA ---
