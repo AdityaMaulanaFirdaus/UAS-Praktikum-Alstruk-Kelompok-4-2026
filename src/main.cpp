@@ -32,13 +32,7 @@ void tampilBuku() {
      cout << "\n-----Fitur Tampil Buku-----" << endl;
      cout << "Fitur ini masih dalam pengembangan...\n";
 }
-    for (int i = 0; i < jumlahBuku; i++) {
-        cout << "ID: " << daftarBuku[i].idBuku 
-             << " | Judul: " << daftarBuku[i].judul 
-             << " | Pengarang: " << daftarBuku[i].pengarang 
-             << " | Status: " << (daftarBuku[i].tersedia ? "Tersedia" : "Dipinjam") << endl;
-    }
-}
+   
 void cariBuku() {
     // Tulis logika pencarian buku di sini
     cout << "\n-----Fitur Cari Buku----" << endl;
